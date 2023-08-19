@@ -1,0 +1,8 @@
+.container {
+    border: 1px solid blue;
+    // The width will be the smaller of the two values when the browser window is adjusted.
+    // When the screen size is smaller than 960px the width will be 100% and 60rem when it is greater than 960px.
+    width: min(100% - 2rem, 60rem);
+    margin-inline: auto;
+  }
+  
