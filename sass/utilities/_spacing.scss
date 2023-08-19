@@ -1,4 +1,12 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
+
+.section {
+  padding-block: $section-padding-block;
+}
+
+.m-inline-auto {
+  margin-inline: auto;
+}
 
 @each $size-name, $size-value in $sizes {
   .margin {
@@ -48,4 +56,3 @@
     }
   }
 }
-  

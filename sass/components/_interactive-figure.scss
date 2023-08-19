@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.interactive-figure {
+  position: relative;
+  overflow: hidden;
+
+  figcaption {
+    --blur-size: 0.18rem;
+    padding: $card-body-padding-sm;
+    text-align: left;
+    background-color: rgb($color-primary-800), 0.75);
+    backdrop-filter: blur(var(--blur-size));
+    -webkit-backdrop-filter: blur(var(--blur-size));
+    position: absolute;
+    bottom: 0;
+  }
+
+  //  if not on a touch screen
+  @media (hover: hover) {
+    figcaption {
+      translate: (0 100%);
+      transition: translate 0.5s;
+    }
+
+    &:hover figcaption {
+      translate: (0 0);
+    }
+  }
+}

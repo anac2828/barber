@@ -1,7 +1,15 @@
 @use "../abstracts" as *;
 
-@each $size-name, $size-value in $font-sizes {
-  .fs-#{$size-name} {
-    font-size: $size-value;
+@each $size-name, $size-map in $font-sizes {
+  @each $size-number, $value in $size-map {
+    
+    @if $size-number == "small" {
+      .fs-#{$size-number} {
+        font-size: var(--fs-#{$size-number});
+        @if $size-number > 600 {
+          line-height: 1.1;
+        }
+      }
+    }
   }
 }

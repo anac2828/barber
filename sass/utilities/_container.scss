@@ -1,8 +1,23 @@
+@use '../abstracts' as *;
+
 .container {
-    border: 1px solid blue;
-    // The width will be the smaller of the two values when the browser window is adjusted.
-    // When the screen size is smaller than 960px the width will be 100% and 60rem when it is greater than 960px.
-    width: min(100% - 2rem, 60rem);
-    margin-inline: auto;
-  }
-  
+  --padding: #{$container-min-margin-inline};
+  --max-width: #{$container-max-width};
+
+  // The width will be the smaller of the two values when the browser window is adjusted.
+  // When the screen size is smaller than --max-width the width will be 100% and 60rem when it is greater than --max-width.
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.container[data-type='narrow'] {
+  --max-width: #{$container-max-width-narrow};
+}
+
+.container[data-type='wide'] {
+  --max-width: #{$container-max-width-wide};
+}
+
+.container[data-type='full-bleed'] {
+  --max-width: 100%;
+}

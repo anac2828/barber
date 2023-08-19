@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+:root {
+  // COLORS
+  @each $color, $shade-map in $colors {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // TEACHER SOLUTION - $screen-size is the map in $font-sizes
+
+  @each $screen-size, $size-map in $font-sizes{
+    @if $screen-size == small{
+      @each $size-name, $size-value in $size-map{
+        --fs-#{$size-name}: #{$size-value};
+      }
+    }else{
+      // in mixins file
+      @include mq($screen-size){
+        @each $size-name, $size-value in $size-map{
+          --fs-#{$size-name}: #{$size-value};
+      }
+    }
+  }
+  }
+}

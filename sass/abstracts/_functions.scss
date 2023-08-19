@@ -3,14 +3,13 @@
 @use 'sizes' as *;
 @use 'typography' as *;
 
-@function clr($color, $shade) {
-  @if map.has-key($colors, $color, $shade) {
-    @return map.get($colors, $color, $shade);
-  } @else {
-    @error '$colors does not have that color!';
-  }
-}
-
+// @function clr($color, $shade) {
+//   @if map.has-key($colors, $color, $shade) {
+//     @return map.get($colors, $color, $shade);
+//   } @else {
+//     @error '$colors does not have that color!';
+//   }
+// }
 
 @function size($size) {
   @if map.has-key($sizes, $size) {
@@ -26,8 +25,4 @@
   } @else {
     @error '$font-sizes does not have that size!';
   }
-}
-
-.test {
-  padding: size(20);
 }

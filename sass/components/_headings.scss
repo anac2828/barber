@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.heading {
+  &-primary {
+    @include heading($font-size-900, $color-accent-400);
+  }
+
+  &-secondary {
+    @include heading($font-size-800, $color-accent-400);
+  }
+  
+  &-tertiary {
+    @include heading($font-size-700, $color-primary-400) 
+  }
+}

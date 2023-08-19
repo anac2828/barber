@@ -1,5 +1,6 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
+// Create utility class for use in HTML
 @each $color, $shade-map in $colors {
   @each $shade, $value in $shade-map {
     .clr-#{$color}-#{$shade} {
@@ -10,4 +11,3 @@
     }
   }
 }
-  
