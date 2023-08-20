@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.week-day-hours {
+  text-align: center;
+
+  .flex-group {
+    --flex-gap: #{$flex-group-gap-large};
+    --justify-content: center;
+  }
+}

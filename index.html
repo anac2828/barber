@@ -10,16 +10,130 @@
   </head>
   <body>
     <header class="header-primary padding-block-8">
-      <div class="container">
-      <img src="assets/images/logo.svg" alt="Barbershop logo" />
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="about us">About us</a></li>
-          <li class="nav__item"><a href="hours">Hours</a></li>
-          <li class="nav__item"><a href="prices">Prices</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="container flex-group">
+        <img src="assets/images/logo.svg" alt="Barbershop logo" />
+        <nav class="nav">
+          <ul class="nav__list flex-group">
+            <li class="nav__item"><a href="about us">About us</a></li>
+            <li class="nav__item"><a href="hours">Hours</a></li>
+            <li class="nav__item"><a href="prices">Prices</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container even-columns">
+          <div class="content">
+            <h1 class="heading-primary">The barber shop</h1>
+            <p>
+              Established over a decade ago,
+              <span class="fw-bold">The Barber Shop</span> is here to serve
+              you're hair needs, whatever they are. From a simple cut, a beard
+              trim or a hot towel shave, we're here to help you with.
+            </p>
+            <div class="flex-group">
+              <button class="btn btn--primary">Book appointment</button>
+              <button class="btn btn--accent">View prices</button>
+            </div>
+          </div>
+          <img
+            src="assets/images/hair-cut.jpg"
+            alt="Barber cutting a young man's haircut"
+          />
+        </div>
+      </section>
+      <!-- ABOUT US -->
+      <section id="about-us">
+        <h2 class="heading-secondary margin-block-end-105">Our services</h2>
+        <div class="container grid-auto-fit margin-block-end-105">
+          <div class="card">
+            <h3 class="heading-4">Hair Cutting</h3>
+            <p>A quick clean up or a totally new style, we have you covered.</p>
+          </div>
+          <div class="card">
+            <h3 class="heading-4">Hot shaves</h3>
+            <p>
+              There is no better way to pamper yourself than to have a hot
+              shave.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="heading-4">Beard cleanup</h3>
+            <p>Our barbers are expects when it comes to working on beards.</p>
+          </div>
+          <div class="card">
+            <h3 class="heading-4">Hair coloring</h3>
+            <p>Expert color work to help you keep looking your best.</p>
+          </div>
+          <div class="card">
+            <h3 class="heading-4">Kids</h3>
+            <p>
+              Bring your kids with you while your at it, we love working them
+              them too!
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="heading-4">products</h3>
+            <p>We carry a wide range of hair and beard products.</p>
+          </div>
+        </div>
+        <button class="btn btn--accent m-inline-auto">Book appointment</button>
+      </section>
+
+      <!-- HOURS -->
+      <section id="hours" class="week-day-hours">
+        <h2 class="heading-secondary margin-block-end-5">Hours</h2>
+        <p>Open 7 days a week to serve your hair cutting needs</p>
+        <div
+          class="container flex-group margin-block-start-105"
+          data-type="wide"
+        >
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Mon</h3>
+              <p>9:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Tue</h3>
+              <p>9:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Wed</h3>
+              <p>9:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Thu</h3>
+              <p>9:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Fri</h3>
+              <p>9:00 - 21:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Sat</h3>
+              <p>10:00 - 21:00</p>
+            </div>
+          </div>
+          <div class="week-day flex-group">
+            <div>
+              <h3 class="heading-tertiary">Sun</h3>
+              <p>10:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

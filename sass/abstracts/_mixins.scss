@@ -1,9 +1,8 @@
-@use "sass:meta";
-@use "sass:math";
-@use "sass:map";
-@use "breakpoints" as *;
-@use "functions" as *;
-@use "tokens" as *;
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'breakpoints' as *;
+@use 'tokens' as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
@@ -25,17 +24,17 @@
 }
 
 @mixin whiteText() {
-  &[data-type="white"] {
+  &[data-type='white'] {
     color: clr(neutral, 100);
   }
 }
 
-@mixin fontSize($value) {
-  font-size: var(--fs-#{value});
-  @if $value > 600 {
-    line-height: 1.1;
-  }
-}
+// @mixin fontSize($value) {
+//   font-size: var(--fs-#{value});
+//   @if $value > 600 {
+//     line-height: 1.1;
+//   }
+// }
 
 @mixin heading($fs, $color: $heading-color-default) {
   font-size: $fs;

@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+.hero {
+    
+    .content{
+        display: grid;
+        row-gap: $grid-row-gap;
+    }
+
+
+   img{
+    border-radius: $border-radius-2;
+    box-shadow: $box-shadow-2;
+   }
+
+   .even-columns{
+    --grid-gap: #{$grid-gap-large};
+    align-items: center;
+   }
+}

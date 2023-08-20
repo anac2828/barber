@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 .card {
   display: grid;
@@ -10,8 +10,9 @@
   line-height: $card-line-height;
   border-radius: $card-border-radius;
   box-shadow: $card-box-shadow;
+  text-align: center;
 
   &__heading {
-    @include heading($card-heading-font-size, $card-heading-color-default)
+    @include heading($card-heading-font-size, $card-heading-color-default);
   }
 }

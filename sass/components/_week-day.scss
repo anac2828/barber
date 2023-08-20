@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.week-day {
+  &.flex-group {
+    align-items: center;
+  }
+
+  &::before, &:last-child::after{
+    content: "";
+    display: inline-flex;
+    width: 1px;
+    height: 26px;
+    background-color: $color-primary-700;
+  }
+}

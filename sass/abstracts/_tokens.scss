@@ -3,8 +3,13 @@
 @use 'typography' as *;
 
 // LAYOUT
-$grid-gap: $size-6;
-$flex-group-gap: $size-4;
+$grid-gap: $size-7;
+$grid-gap-large: $size-10;
+$grid-row-gap: $size-5;
+
+$flex-group-gap-large: $size-85;
+$flex-group-gap: $size-5;
+$header-justify-content: space-between;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
 $section-padding-block: clamp(5rem, 10vh, 6rem);
@@ -53,15 +58,14 @@ $heading-text-transform: uppercase;
 $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
-
 // COMPONENTS
 
 // buttons
 $button-font-family: inherit;
-$button-font-size: inherit;
+$button-font-size: $font-size-600;
 $button-text-transform: none;
 $button-font-weight-bold: $font-weight-bold;
-$button-padding: .75em 2em;
+$button-padding: 0.75em 2em;
 $button-border: 0;
 $button-border-radius: $border-radius-1;
 
@@ -82,7 +86,7 @@ $button-primary-background-hover: $color-primary-800;
 $card-flow-spacing: $size-2;
 $card-body-padding: $size-8;
 $card-background-default: $color-primary-100;
-$card-color-default: $body-background-color;
+$card-color-default: $body-text-color;
 $card-font-family: $body-font-family;
 $card-line-height: 1.25;
 $card-heading-color-default: $card-color-default;

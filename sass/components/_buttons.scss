@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .btn {
-  display: inline-flex;
+  display: block;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
@@ -12,7 +12,7 @@
   text-transform: $button-text-transform;
   font-weight: $button-font-weight-bold;
   padding: $button-padding;
-  border-radius: $buttton-border-radius;
+  border-radius: $button-border-radius;
   transition: 0.275s ease;
 
   &--accent {

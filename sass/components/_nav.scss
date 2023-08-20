@@ -2,9 +2,12 @@
 
 .nav {
   &__list {
-    --flex-gap: 1.5rem;
+    --flex-gap: #{$size-9};
     list-style: none;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-loose;
     font-family: $ff-serif;
+    font-weight: $font-weight-bold;
   }
 
   &__item {

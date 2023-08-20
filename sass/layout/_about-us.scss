@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+#about-us {
+  .heading-secondary {
+    text-align: center;
+  }
+
+  background-color: $color-primary-200;
+}
