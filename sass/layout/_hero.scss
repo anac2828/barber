@@ -16,5 +16,12 @@
    .even-columns{
     --grid-gap: #{$grid-gap-large};
     align-items: center;
+
+    @include mq(medium){
+        --justify-content: center;
+        text-align: center;
+        justify-items: center;
+    }
+
    }
 }

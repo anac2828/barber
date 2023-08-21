@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.footer {
+  --justify-content: center;
+  background-color: $color-primary-800;
+  color: $color-primary-300;
+  text-align: center;
+
+  p {
+    margin-block-end: 0;
+  }
+
+  .phone {
+    font-family: $ff-serif;
+    font-weight: $font-weight-bold;
+    color: $color-neutral-100;
+    letter-spacing: $letter-spacing-loose;
+
+    &:hover {
+      color: $color-accent-300;
+    }
+  }
+
+  .container.flex-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,28 +1,63 @@
-@use "../abstracts" as *;
-@use "sass:map";
+@use '../abstracts' as *;
+@use 'sass:map';
 
 :root {
   // COLORS
-  @each $color, $shade-map in $colors {
+  @each $color, $shade-map in $active-theme {
     @each $shade, $value in $shade-map {
       --#{$color}-#{$shade}: #{$value};
     }
   }
 
-  // TEACHER SOLUTION - $screen-size is the map in $font-sizes
-
-  @each $screen-size, $size-map in $font-sizes{
-    @if $screen-size == large{
-      @each $size-name, $size-value in $size-map{
-        --fs-#{$size-name}: #{$size-value};
-      }
-    }else{
-      // in mixins file
-      @include mq($screen-size){
-        @each $size-name, $size-value in $size-map{
-          --fs-#{$size-name}: #{$size-value};
+  @if ($enable-media-query-dark-mode) {
+    @media (prefers-color-scheme: dark) {
+      @each $color, $shade-map in $dark {
+        @each $shade, $value in $shade-map {
+          --#{$color}-#{$shade}: #{$value};
+        }
       }
     }
   }
+
+  // TEACHER SOLUTION - $screen-size is the map in $font-sizes
+
+  @each $screen-size, $size-map in $font-sizes {
+    @if $screen-size == large {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      // in mixins file
+      @include mq($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+}
+
+// THEME SWITCHER
+body[data-theme='light'] {
+  @each $color, $shade-map in $light {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+body[data-theme='dark'] {
+  @each $color, $shade-map in $dark {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+body[data-theme='😎'] {
+  @each $color, $shade-map in $sleek {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
   }
 }

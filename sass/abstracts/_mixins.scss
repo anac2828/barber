@@ -3,18 +3,19 @@
 @use 'sass:map';
 @use 'breakpoints' as *;
 @use 'tokens' as *;
+@use 'colors' as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
-    @media screen and (min-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint) {
       @content;
     }
   } @else if meta.type-of($size) == number {
     @if math.is-unitless($size) {
       @error 'when using a number with @mq() make sure to include a unit';
     } @else {
-      @media screen and (min-width: $size) {
+      @media screen and (max-width: $size) {
         @content;
       }
     }
@@ -44,4 +45,12 @@
   letter-spacing: $heading-letter-spacing;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
+}
+
+@mixin week-day-border(){
+  content: "";
+    display: inline-flex;
+    width: 1px;
+    height: 26px;
+    background-color: $color-primary-700;
 }

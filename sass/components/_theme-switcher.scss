@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+.theme-switcher {
+  &.flex-group {
+    width: fit-content;
+  }
+}

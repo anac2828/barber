@@ -5,11 +5,74 @@
     align-items: center;
   }
 
-  &::before, &:last-child::after{
+  &::before,
+  &:last-child::after {
     content: "";
     display: inline-flex;
     width: 1px;
     height: 26px;
     background-color: $color-primary-700;
   }
+  // apply border on last child in a row
+
+  
+  @include mq(1152px) {
+    &:nth-child(6)::after {
+     @include week-day-border
+    }
+  }
+  
+  @include mq(977px) {
+    &:nth-child(5)::after {
+      @include week-day-border
+    }
+
+    &:nth-child(6)::after{
+      display: none;
+    }
+  }
+
+  @include mq(811px) {
+    &:nth-child(4)::after {
+    @include week-day-border
+    }
+
+    &:nth-child(5)::after{
+      display: none;
+    }
+  }
+
+  @include mq(649px) {
+    &:nth-child(3n)::after {
+      @include week-day-border
+    }
+
+    &:nth-child(4)::after {
+      display: none;
+      }
+  }
+  // 
+
+  @include mq(463px) {
+    &:nth-child(2n) {
+      color: blue;
+    }
+  }
+  @include mq(472px) {
+    &:nth-child(3), &:nth-child(5) {
+      // color: blue;
+    }
+  }
+  @include mq(509px) {
+    &:nth-child(5)::after {
+      @include week-day-border;
+    }
+  }
+
+  &:nth-child(6)::after{
+    display: none;
+  }
+  
+  
+ 
 }

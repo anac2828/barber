@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+#pricing{
+    text-align: center;
+    background-color: $color-primary-200;
+
+     .grid-auto-fit{
+        column-gap: $grid-column-gap;
+        row-gap: $grid-row-gap-1;
+        flex-direction: column;
+    }
+}

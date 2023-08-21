@@ -2,10 +2,16 @@
 @use 'colors' as *;
 @use 'typography' as *;
 
+// THEME
+$active-theme: $light;
+$enable-media-query-dark-mode: false;
+
 // LAYOUT
 $grid-gap: $size-7;
 $grid-gap-large: $size-10;
 $grid-row-gap: $size-5;
+$grid-row-gap-1: 3.25rem;
+$grid-column-gap: 7.5rem;
 
 $flex-group-gap-large: $size-85;
 $flex-group-gap: $size-5;
@@ -60,6 +66,14 @@ $link-color-hover: $color-text-interactive-hover;
 
 // COMPONENTS
 
+// logo
+$logo-fill-default: $color-primary-400;
+$logo-fill-header: $color-primary-300;
+$logo-fill-footer: $color-accent-400;
+$logo-size-default: 15rem;
+$logo-size-header: $logo-size-default;
+$logo-size-footer: $logo-size-default;
+
 // buttons
 $button-font-family: inherit;
 $button-font-size: $font-size-600;
@@ -93,3 +107,16 @@ $card-heading-color-default: $card-color-default;
 $card-heading-font-size: $font-size-600;
 $card-border-radius: $border-radius-2;
 $card-box-shadow: $box-shadow-1;
+
+//form
+
+$form-label-font-weight: $font-weight-bold;
+$form-label-text-color: $body-text-color;
+$form-input-font-weight: $form-label-font-weight;
+$form-input-background-color: $color-neutral-100;
+$form-input-border-color: $color-primary-200;
+$form-input-border-radius: $border-radius-1;
+$form-input-border-focus-color: $color-accent-400;
+$form-input-padding: $size-3;
+$form-place-holder-text-color: $form-input-border-color;
+$form-place-holder-font-weight: $form-label-font-weight;

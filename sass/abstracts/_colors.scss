@@ -1,16 +1,57 @@
 // global color tokens
+// $_clr-white: hsl(0 0% 100%);
+// $_clr-orange-300: hsl(8 62% 75%);
+// $_clr-orange-400: hsl(8 62% 55%);
+// $_clr-orange-500: hsl(8 62% 35%);
+// $_clr-brown-100: hsl(33 24% 92%);
+// $_clr-brown-200: hsl(33 25% 88%);
+// $_clr-brown-300: hsl(33 23% 69%);
+// $_clr-brown-400: hsl(22 31% 44%);
+// $_clr-brown-700: hsl(20 23% 23%);
+// $_clr-brown-800: hsl(18 23% 10%);
+
 $_clr-white: hsl(0 0% 100%);
-$_clr-orange-300: hsl(8 62% 75%);
+$_clr-orange-300: hsl(8, 75%, 60%); // added orange-300
 $_clr-orange-400: hsl(8 62% 55%);
 $_clr-orange-500: hsl(8 62% 35%);
 $_clr-brown-100: hsl(33 24% 92%);
-$_clr-brown-200: hsl(33 25% 88%);
+$_clr-brown-200: hsl(33 24% 88%);
 $_clr-brown-300: hsl(33 23% 69%);
 $_clr-brown-400: hsl(22 31% 44%);
 $_clr-brown-700: hsl(20 23% 23%);
 $_clr-brown-800: hsl(18 23% 10%);
+$_clr-brown-900: hsl(15, 22%, 7%); // added brown-900
 
-$colors: (
+$_clr-green-300: hsl(150 75% 50%);
+$_clr-purple-300: hsl(280 75% 50%);
+$_clr-blue-100: hsl(200 24% 85%);
+$_clr-blue-200: hsl(200 24% 80%);
+$_clr-blue-300: hsl(200 23% 65%);
+$_clr-blue-400: hsl(200 31% 55%);
+$_clr-blue-700: hsl(200 23% 30%);
+$_clr-blue-800: hsl(200 23% 25%);
+$_clr-blue-900: hsl(200 23% 15%);
+
+// $colors: (
+//   'neutral': (
+//     '100': $_clr-white,
+//   ),
+//   'accent': (
+//     '300': $_clr-orange-300,
+//     '400': $_clr-orange-400,
+//     '500': $_clr-orange-500,
+//   ),
+//   'primary': (
+//     '100': $_clr-brown-100,
+//     '200': $_clr-brown-200,
+//     '300': $_clr-brown-300,
+//     '400': $_clr-brown-400,
+//     '700': $_clr-brown-700,
+//     '800': $_clr-brown-800,
+//   ),
+// );
+
+$light: (
   'neutral': (
     '100': $_clr-white,
   ),
@@ -26,6 +67,42 @@ $colors: (
     '400': $_clr-brown-400,
     '700': $_clr-brown-700,
     '800': $_clr-brown-800,
+  ),
+);
+
+$dark: (
+  'neutral': (
+    '100': $_clr-brown-800,
+  ),
+  'accent': (
+    '400': $_clr-orange-300,
+    '500': $_clr-orange-500,
+  ),
+  'primary': (
+    '100': $_clr-brown-900,
+    '200': $_clr-brown-800,
+    '300': $_clr-brown-400,
+    '400': $_clr-brown-300,
+    '700': $_clr-brown-200,
+    '800': $_clr-brown-100,
+  ),
+);
+
+$sleek: (
+  'neutral': (
+    '100': $_clr-blue-800,
+  ),
+  'accent': (
+    '400': $_clr-green-300,
+    '500': $_clr-purple-300,
+  ),
+  'primary': (
+    '100': $_clr-blue-900,
+    '200': $_clr-blue-800,
+    '300': $_clr-blue-400,
+    '400': $_clr-blue-300,
+    '700': $_clr-blue-200,
+    '800': $_clr-blue-100,
   ),
 );
 
