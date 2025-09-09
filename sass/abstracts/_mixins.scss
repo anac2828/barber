@@ -5,6 +5,7 @@
 @use 'tokens' as *;
 @use 'colors' as *;
 
+// mixin for media queries
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
@@ -37,6 +38,7 @@
 //   }
 // }
 
+// mixin for headings
 @mixin heading($fs, $color: $heading-color-default) {
   font-size: $fs;
   color: $color;
@@ -47,10 +49,10 @@
   line-height: $heading-line-height;
 }
 
-@mixin week-day-border(){
-  content: "";
-    display: inline-flex;
-    width: 1px;
-    height: 26px;
-    background-color: $color-primary-700;
+@mixin week-day-border() {
+  content: '';
+  display: inline-flex;
+  width: 1px;
+  height: 26px;
+  background-color: $color-primary-700;
 }

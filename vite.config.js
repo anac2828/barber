@@ -1,7 +1,8 @@
-import htmlPurge from 'vite-plugin-purgecss'
+import { defineConfig } from 'vite';
+import htmlPurge from 'vite-plugin-purgecss';
 
-export default {
-    plugins: [
-        htmlPurge(),
-    ]
-}
+export default defineConfig({
+  plugins: [htmlPurge()],
+  build: { outDir: 'dist' },
+  base: '/barber',
+});
